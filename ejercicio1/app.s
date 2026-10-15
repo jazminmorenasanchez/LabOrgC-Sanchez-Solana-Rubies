@@ -138,13 +138,15 @@ app:                             // Inicio del dibujo.
     mov x4, 88                   // Alto: 88 pixeles.
     bl rectangulo                // Dibuja el rectangulo y luego vuelve aqui.
 
-    // Personaje: cuerpo, brazos y piernas oscuros.
+    // Personaje: cuerpo azul, brazos celestes y piernas verdes.
+    mov w5, 0x001F               // Elige azul para el cuerpo.
     mov x1, 47                   // Posicion horizontal del borde izquierdo: 47.
     mov x2, 76                   // Posicion vertical del borde superior: 76.
     mov x3, 20                   // Ancho: 20 pixeles.
     mov x4, 20                   // Alto: 20 pixeles.
     bl rectangulo                // Dibuja el rectangulo y luego vuelve aqui.
 
+    mov w5, 0x867D               // Elige celeste para ambos brazos.
     mov x1, 41                   // Posicion horizontal del borde izquierdo: 41.
     mov x2, 78                   // Posicion vertical del borde superior: 78.
     mov x3, 4                    // Ancho: 4 pixeles.
@@ -157,6 +159,7 @@ app:                             // Inicio del dibujo.
     mov x4, 16                   // Alto: 16 pixeles.
     bl rectangulo                // Dibuja el rectangulo y luego vuelve aqui.
 
+    mov w5, 0x07E0               // Elige verde para ambas piernas.
     mov x1, 48                   // Posicion horizontal del borde izquierdo: 48.
     mov x2, 98                   // Posicion vertical del borde superior: 98.
     mov x3, 6                    // Ancho: 6 pixeles.
@@ -173,17 +176,18 @@ app:                             // Inicio del dibujo.
     mov x1, 57                   // Posicion horizontal del centro: 57.
     mov x2, 65                   // Posicion vertical del centro: 65.
     mov x3, 12                   // Radio: 12 pixeles.
-    mov w5, 0xFFFF               // Elige blanco para la cabeza.
+    mov w5, 0xFF59               // Elige crema para la cabeza.
     bl circulo                   // Dibuja la cabeza y luego vuelve aqui.
 
     // Sombrero triangular: X1, X2 = vertice; X3 = altura.
     mov x1, 57                   // Posicion horizontal del vertice: 57.
     mov x2, 38                   // Posicion vertical del vertice: 38.
     mov x3, 18                   // Altura: 18 pixeles.
-    mov w5, 0x2104               // Elige gris oscuro para paredes y personaje.
+    mov w5, 0xF800               // Elige rojo para el gorro.
     bl triangulo                 // Dibuja el sombrero y luego vuelve aqui.
 
     // Ojos.
+    mov w5, 0x0000               // Elige negro para ambos ojos.
     mov x1, 51                   // Posicion horizontal del borde izquierdo: 51.
     mov x2, 63                   // Posicion vertical del borde superior: 63.
     mov x3, 3                    // Ancho: 3 pixeles.
