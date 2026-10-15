@@ -1,0 +1,8 @@
+boot_SD/
+TemplateUCC/
+*.o
+*.elf
+*.hex
+*.list
+*.img
+memory_map.txt
