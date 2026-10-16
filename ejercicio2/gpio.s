@@ -1,9 +1,8 @@
-// GPIO de la foto derecha de la pagina 5.
-// Foto izquierda: abajo=18, izquierda=15, derecha=17.
+// GPIO de la placa recibida: foto izquierda de la pagina 5.
 .equ BOTON_ARRIBA,    (1 << 14)
-.equ BOTON_ABAJO,     (1 << 17)
-.equ BOTON_IZQUIERDA, (1 << 18)
-.equ BOTON_DERECHA,   (1 << 15)
+.equ BOTON_ABAJO,     (1 << 18)
+.equ BOTON_IZQUIERDA, (1 << 15)
+.equ BOTON_DERECHA,   (1 << 17)
 .equ GPIO_GPSET0, 0x1C
 .equ GPIO_GPCLR0, 0x28
 

@@ -16,16 +16,16 @@ Los tiempos se miden leyendo el contador CLO del System Timer, documentado en la
 
 ## Pulsadores y leds
 
-Todavía no se dispone de la placa. Las constantes al principio de `gpio.s` usan provisionalmente la foto derecha de la página 5 de la guía:
+Las constantes al principio de `gpio.s` corresponden a la placa recibida, la de la foto izquierda de la página 5 de la guía:
 
-| Dirección | Foto derecha (configuración actual) | Foto izquierda |
-| --- | --- | --- |
-| Arriba | GPIO14 | GPIO14 |
-| Abajo | GPIO17 | GPIO18 |
-| Izquierda | GPIO18 | GPIO15 |
-| Derecha | GPIO15 | GPIO17 |
+| Dirección | GPIO |
+| --- | --- |
+| Arriba | GPIO14 |
+| Abajo | GPIO18 |
+| Izquierda | GPIO15 |
+| Derecha | GPIO17 |
 
-Para la placa de la foto izquierda, ajustar las constantes de abajo, izquierda y derecha en `gpio.s`, y recompilar. Los pulsadores se leen activos en alto y los leds son activos en bajo, según la guía.
+Los pulsadores se leen activos en alto y los leds son activos en bajo, según la guía.
 
 La configuración de GPIO modifica solamente los campos de los pines utilizados. Sus registros se acceden mediante operaciones de 32 bits, según el manual BCM2835, páginas 90–95, usando la base `0x3F200000` indicada en la guía.
 
@@ -48,4 +48,4 @@ Copiar `kernel8.img` a la SD preparada con los archivos suministrados por la cá
 
 Compilación con el Makefile y el ensamblador de la plantilla, sin errores ni advertencias. En emulación ARMv8 se verificaron el reposo, las cuatro direcciones, los choques, la configuración GPIO preservando los campos ajenos, y un recorrido completo de 515 pasos hasta la meta. También se comprobaron la secuencia de leds, la espera con desborde del contador, la conservación de las paredes y el borrado sin rastros del personaje. La vista previa proviene del framebuffer generado por el programa emulado.
 
-Queda pendiente confirmar el modelo de placa y probar en la Raspberry los pulsadores, la velocidad de movimiento y los leds. La vista previa no reemplaza las fotografías del resultado en hardware solicitadas para el informe de entrega.
+Queda pendiente probar en la Raspberry los pulsadores, la velocidad de movimiento y los leds. La vista previa no reemplaza las fotografías del resultado en hardware solicitadas para el informe de entrega.
